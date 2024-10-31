@@ -17,6 +17,7 @@ public class grappletypehandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("hiiiii");
         throwchange.action.performed += changethrow;
         grapplechange.action.performed += changegrapple;
         
@@ -49,8 +50,11 @@ public class grappletypehandler : MonoBehaviour
     }
     void updategrapple()
     {
-        
-        
+
+        Debug.Log("throwtype");
+        Debug.Log(throwtype);
+        Debug.Log("grappletype");
+        Debug.Log(grappletype);
 
         if (throwtype == 1f)
         {

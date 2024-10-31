@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5045438303835497089}
   - component: {fileID: 5375654976374595619}
   - component: {fileID: 2926208210721260182}
-  - component: {fileID: 6378675569305412600}
   m_Layer: 0
   m_Name: grapplepointCA
   m_TagString: grapple
@@ -130,7 +129,7 @@ Rigidbody:
     m_Bits: 63
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -266,23 +265,3 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &6378675569305412600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8444684756401734959}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60eabbc00db61724e847b33a35f70165, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  linestard: {fileID: -8642060420520221393, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  lineend: {fileID: 7535153318994056435, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  line: {fileID: 2926208210721260182}
-  gp: {fileID: 8444684756401734959}
-  righthand: {fileID: 0}
-  xAngle: 0
-  yAngle: 0
-  zAngle: 0

@@ -21,8 +21,9 @@ public class grapplecodeCA : MonoBehaviour
 
     Vector3 stopspot = new Vector3(0f, 0f, 0f);
     float isgrappleing = 1f;
+    Vector3 rh = new Vector3(0, 0, 0);
 
-    void Start()
+    void OnEnable()
     {
         Debug.Log("test");
 
@@ -46,9 +47,9 @@ public class grapplecodeCA : MonoBehaviour
         // We can get the name of that object by accessing it's Game Object then the name property
 
         GameObject newgrapplepointCA = Instantiate(grapplepointCA, transform.position, transform.rotation);
-        newgrapplepointCA.transform.position = righthand.transform.position;
-        newgrapplepointCA.transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
-        //newgrapplepoint.GetComponent<Rigidbody>().AddForce(transform.forward * velo);
+        
+        
+        newgrapplepointCA.GetComponent<Rigidbody>().AddForce(transform.forward * 100f);
 
 
         // Don't forget to attach the player origin in the editor!
@@ -74,18 +75,24 @@ public class grapplecodeCA : MonoBehaviour
         if (isgrappleing == 2f)
         {
             GameObject currentgp = GameObject.FindGameObjectWithTag("grapple");
-            XROrigin.GetComponent<Rigidbody>().AddForce(currentgp.transform.forward * .5f);
+
+            XROrigin.GetComponent<Rigidbody>().AddForce((currentgp.transform.position - XROrigin.transform.position) * 3f);
+
+            //XROrigin.transform.position= Vector3.MoveTowards(XROrigin.transform.position,currentgp.transform.position,.05f);
             LineRenderer line = currentgp.GetComponent<LineRenderer>();
             line.SetPosition(0, currentgp.transform.position);
-            line.SetPosition(1, righthand.transform.position);
-            currentgp.transform.position = stopspot;
+            rh = righthand.transform.position;
+            line.SetPosition(1, rh);
         }
-        else
+        else if (isgrappleing == 1f)
         {
             GameObject currentgp = GameObject.FindGameObjectWithTag("grapple");
             LineRenderer line = currentgp.GetComponent<LineRenderer>();
+
+
             line.SetPosition(0, currentgp.transform.position);
             line.SetPosition(1, currentgp.transform.position);
+
         }
     }
 

@@ -216,7 +216,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "upperrightbutton",
+                    "name": "upperleftbutton",
                     "type": "Button",
                     "id": "3b7d37be-a63d-441f-ab1c-5625820ea554",
                     "expectedControlType": "Button",
@@ -595,7 +595,7 @@
                     "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "lowerleftbutton",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -606,8 +606,8 @@
                     "path": "<XRController>{LeftHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "upperrightbutton",
+                    "groups": "Generic XR Controller",
+                    "action": "upperleftbutton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -1148,7 +1148,7 @@
                     "path": "<XRController>{RightHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "lowerrightbutton",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1159,7 +1159,7 @@
                     "path": "<XRController>{RightHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "upperrightbutton",
                     "isComposite": false,
                     "isPartOfComposite": false
